@@ -37,10 +37,12 @@
                         <label for="editora">Editora</label>
                         <input type="text" name="editora" id="editora" placeholder="Editora" required>
                     </div>
+
                     <div class="input-container">
                         <label for="dtpublicacao">Publicação</label>
                         <input type="date" name="dtpublicacao" id="dtpublicacao" required>
                     </div>
+
                     <div class="input-container">
                         <label>Idioma</label>
                         <div class="input-check">
@@ -54,12 +56,15 @@
                         <div class="input-check">
                             <input type="checkbox" name="idioma" value="Espanhol" id="espanhol">
                             <label for="espanhol">Espanhol</label>
-                            <input type="text" name="isbn" id="isbn" placeholder="ISBN do Livro" pattern="\d{3}-\d{10}" required> <!--validar o valor do campo de entrada-->
+                        
                         </div>
                     </div>
+
                     <div class="input-container">
                         <label for="isbn">ISBN</label>
+                        <input type="text" name="isbn" id="isbn" placeholder="ISBN do livro" pattern="\d{3}-\d{10}" required>
                     </div>
+
                     <div class="input-container">
                         <label for="ano">Ano</label>
                         <input type="number" name="ano" id="ano" placeholder="Ano de publicação" required>
@@ -69,6 +74,7 @@
                         <label for="paginas">Páginas</label>
                         <input type="number" name="paginas" id="paginas" placeholder="Número de páginas" required>
                     </div>
+
                     <div class="input-container">
                         <label for="tropes">Tropes ou Categoria</label>
                         <select name="tropes" id="tropes" required> <!--lista de opções-->
@@ -81,11 +87,34 @@
                             <option value="Romance LGBT+">Romance LGBT+</option>
                         </select>
                     </div>
-
-
+                    <div class="input-container">
+                        <label>Estado do Livro</label>
+                        <div class="radio-group"> <!--unica opção-->
+                            <input type="radio" name="situacao" id="novo" value="Novo" required checked>
+                            <label for="novo">Novo</label>
+                          
+                            <input type="radio" name="situacao" id="usado" value="Usado" required>
+                            <label for="usado">Usado</label>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <label for="resumo">Resumo</label>
+                        <textarea name="resumo" id="resumo" placeholder="Resumo do livro" rows="5" required></textarea>
+                    </div>
+                    <div class="input-container">
+                        <label for="capa">Capa</label>
+                        <input type="file" name="capa" id="capa" accept="image/*">
+                    </div>
+                    <div class="actions">
+                        <button type="submit">Cadastrar</button>
+                        <button type="reset">Limpar</button>
+                    </div>
                 </fieldset>
             </form>
         </section>
     </main>
+    <footer>
+        <p>&copy; 2023 Livraria Fantástica | Criado por Isabele Tomazoni</p>
+    </footer>
 </body>
 </html>
